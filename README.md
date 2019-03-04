@@ -8,6 +8,10 @@ The user, when moving around, receives information about his location based on b
 
 The application should work with all beacons supporting the iBeacon standard, but use of kontakt.io (https://kontakt.io/) beacons is recommended. Visionauts uses kontakt.io SDK but you can easily replace it with different one.
 
+![ScreenShot](https://raw.github.com/softnauts-open-source/visionauts-android/master/screenshots/sc1.png)
+![ScreenShot](https://raw.github.com/softnauts-open-source/visionauts-android/master/screenshots/sc2.png)
+![ScreenShot](https://raw.github.com/softnauts-open-source/visionauts-android/master/screenshots/sc3.png)
+
 ### I. How to use it
 
 ##### 1. Open project in Android Studio
