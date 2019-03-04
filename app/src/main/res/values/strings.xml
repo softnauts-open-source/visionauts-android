@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Visonauts</string>
+    <string name="detecting">Detecting...</string>
+    <string name="help">Help</string>
+    <string name="settings">Settings</string>
+    <string name="scanning_range">Bluetooth scanning range</string>
+    <string name="range_progress">%1$s meter</string>
+    <string name="working">Visionauts app is working in foreground</string>
+    <string name="go_to_settings">Go to settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="location_permissions_required">Location permissions are required to use this app.</string>
+    <string name="retry">Retry</string>
+    <string name="first_run_download_data_error">Downloading database error. Make sure that your intenet connection is
+        stable and retry.
+    </string>
+    <string name="error">Error</string>
+    <string name="unknown_error">Unknown error while sync data. Contact with app provider.</string>
+    <string name="ok">Ok</string>
+    <string name="turn_on_bluetooth">Turn on bluetooth</string>
+    <string name="back_button">back button</string>
+    <string name="range_seek_bar">scanning range seek bar</string>
+    <string name="next_beacon_button">next beacon button</string>
+    <string name="previous_beacon_button">previous beacon button</string>
+    <string name="go_to_settings_button">go to settings button</string>
+    <string name="go_to_help_button">go to help button</string>
+    <string name="play_button">play button</string>
+
+    <!--Here, put text that should be displayed in help screen. -->
+    <string name="help_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pretium arcu aliquam nisi
+        gravida, a ultrices diam feugiat. Nunc tincidunt vulputate tristique. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis egestas. Cras a molestie eros, in commodo lectus. Etiam ut
+        porttitor felis, in malesuada mi. Pellentesque nisi odio, aliquet sit amet ante hendrerit, luctus feugiat ante.
+        Curabitur eleifend magna eu diam euismod, sed lacinia nulla rutrum.
+    </string>
+</resources>

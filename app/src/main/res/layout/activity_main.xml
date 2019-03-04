@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity">
+
+    <ImageView
+            android:contentDescription="@string/next_beacon_button"
+            android:padding="20dp"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/right_arrow_5_copy_2"
+            android:id="@+id/buttonNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonPlay"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/buttonPlay"/>
+    <ImageView
+            android:contentDescription="@string/previous_beacon_button"
+            android:padding="20dp"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/right_arrow_5_copy"
+            android:id="@+id/buttonPrevious"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonPlay"
+            app:layout_constraintTop_toTopOf="@+id/buttonPlay"/>
+    <ImageView
+            android:contentDescription="@string/go_to_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/group_3"
+            android:id="@+id/buttonSettings"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"/>
+    <ImageView
+            android:contentDescription="@string/go_to_help_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/group_2"
+            android:id="@+id/buttonHelp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"/>
+    <ImageView
+            android:src="@drawable/oval_copy_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="-30dp"/>
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+            android:id="@+id/pulsator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:pulse_count="4"
+            app:pulse_duration="1000"
+            app:pulse_repeat="0"
+            app:pulse_color="@color/colorAccent"
+            app:pulse_startFromScratch="false"
+            app:pulse_interpolator="Linear"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp">
+
+    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+    <ImageView
+            android:id="@+id/loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_4"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+            android:visibility="gone"
+            android:id="@+id/bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:fontFamily="@font/nova"
+            android:id="@+id/textDetecting"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="@string/detecting"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:visibility="gone"
+            android:fontFamily="@font/nova"
+            android:id="@+id/textBluetooth"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="@string/turn_on_bluetooth"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:contentDescription="@string/play_button"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/group_8"
+            android:id="@+id/buttonPlay"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonHelp"/>
+
+    <TextView
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:id="@+id/currentItem"
+            tools:text="Kitchen"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonPlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="32dp"/>
+
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/bluetoothGroup"
+            android:layout_width="0dp" android:layout_height="0dp"
+            app:constraint_referenced_ids="bluetooth, textBluetooth"/>
+
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/detectingGroup"
+            android:layout_width="0dp" android:layout_height="0dp"
+            app:constraint_referenced_ids="loop, textDetecting, pulsator"/>
+
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/beaconsGroup"
+            android:layout_width="0dp" android:layout_height="0dp"
+            app:constraint_referenced_ids="currentItem, buttonPlay"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.softnauts.visionauts">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+            android:name=".VisionautsApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity
+                android:name=".ui.splash.SplashActivity"
+                android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ui.init.InitActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".ui.help.HelpActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".ui.settings.SettingsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".ui.main.MainActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+        <service
+                android:name=".KontaktIOScanService"
+                android:enabled="true"
+                android:exported="false"/>
+        <service
+                android:name="com.kontakt.sdk.android.ble.service.ProximityService"
+                android:exported="false"/>
+    </application>
+
+</manifest>
