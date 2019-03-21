@@ -117,6 +117,7 @@ class MainViewModelTest {
             .thenReturn(Maybe.just(beaconDto))
 
         mainViewModel.beaconsList.add(beaconDto)
+        mainViewModel.currentItemPosition.value = 0
         assertTrue(mainViewModel.beaconsList.contains(beaconDto))
         mainViewModel.onBeaconLost(SimpleBeaconModel("uuid", "minor", "major"))
         assertTrue(mainViewModel.beaconsList.contains(beaconDto).not())
