@@ -86,19 +86,18 @@ class MainViewModel @Inject constructor(
             compositeDisposable.add(
                 beaconDataSource.getBeaconByIdentifier(uuid, minor, major)
                     .subscribe({ it ->
+                        val currentItem = beaconsList[currentItemPosition.value!!]
                         beaconsList.remove(it)
-                        if(beaconsList.isEmpty()){
+                        if (beaconsList.isEmpty()) {
                             currentItemPosition.value = NONE
                             viewState.value = MainActivityViewState.DETECTING
-                        }else{
-                            beaconsList[currentItemPosition.value!!].apply {
-                                if(this == it){
-                                    currentItemPosition.value = 0
-                                    currentItemLiveData.value = Event(beaconsList.first())
-                                }else{
-                                    currentItemPosition.value = beaconsList.indexOf(this)
-                                    currentItemLiveData.value = Event(this)
-                                }
+                        } else {
+                            if (currentItem == it) {
+                                currentItemPosition.value = 0
+                                currentItemLiveData.value = Event(beaconsList.first())
+                            } else {
+                                currentItemPosition.value = beaconsList.indexOf(currentItem)
+                                currentItemLiveData.value = Event(currentItem)
                             }
                         }
                     }, { t ->
